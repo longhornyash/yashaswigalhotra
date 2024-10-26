@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashaswi Galhotra - Research Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6; }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+
+        .glow-on-hover {
+            transition: all 0.3s ease;
+        }
+
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Fixed Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-xl font-bold gradient-text">Yashaswi Galhotra</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="#impact" class="text-gray-600 hover:text-blue-600 transition">Impact</a>
+                    <a href="#publications" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
+                    <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Resume</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Left Content Section -->
+                <div class="md:w-1/2 text-center md:text-left animate__animated animate__fadeInLeft">
+                    <h1 class="text-5xl font-bold mb-6">
+                        Hi, I'm <span class="gradient-text">Yashaswi Galhotra</span>
+                    </h1>
+                    <div class="typewriter text-2xl text-gray-700 mb-6">
+                        Building AI For Better Living, Longer*
+                        <div class="text-sm italic mt-2">*upgrading humans to version 2.0, no restart required 🚀😎</div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#research" class="px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition transform hover:scale-105">
+                            Explore My Research
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition transform hover:scale-105">
+                            Let's Collaborate
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Right Image Section -->
+                <div class="md:w-1/2 animate__animated animate__fadeInRight">
+                    <img src="/Users/yashaswigalhotra/Desktop/yashaswi-website/my-img.jpeg" 
+                         alt="Profile" 
+                         class="rounded-full shadow-2xl floating w-[400px] h-[400px] object-cover mx-auto">
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
+                <i class="fas fa-chevron-down text-blue-600 text-3xl"></i>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    .typewriter {
+        overflow: hidden;
+        border-right: .15em solid #3b82f6;
+        white-space: nowrap;
+        animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+    }
+    
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #3b82f6; }
+    }
+    
+    .floating {
+        animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+        0% { transform: translate(0, 0px); }
+        50% { transform: translate(0, 15px); }
+        100% { transform: translate(0, -0px); }
+    }
+    
+    /* Gradient text animation */
+    .gradient-text {
+        background: linear-gradient(45deg, #3b82f6, #60a5fa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientFlow 3s ease infinite;
+    }
+    
+    @keyframes gradientFlow {
+        0% { background-position: 0% 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0% 50% }
+    }
+    
+    /* Smooth scroll indicator */
+    .scroll-indicator {
+        animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+        40% { transform: translateY(-30px) translateX(-50%); }
+        60% { transform: translateY(-15px) translateX(-50%); }
+    }
+    </style>
+
+    <section id="publications" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Research & Publications</h2>
+            
+            <!-- Publication Categories Tabs -->
+            <div class="flex justify-center mb-12 space-x-4">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-lg publication-tab active">All</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg publication-tab hover:bg-blue-50">Papers</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg publication-tab hover:bg-blue-50">Posters</button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg publication-tab hover:bg-blue-50">In Review</button>
+            </div>
+    
+            <!-- Publications Grid -->
+            <div class="space-y-8">
+                <!-- Accepted Paper Example -->
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover transform transition duration-500">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/4">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="/api/placeholder/300/200" alt="Research Paper" class="rounded-lg w-full object-cover">
+                            </div>
+                            <div class="mt-4">
+                                <span class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                                    Accepted
+                                </span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-2xl font-bold mb-4">Towards Instructing Disease-Drug Link Prediction with Social Determinants of Health</h3>
+                            <p class="text-gray-600 mb-2">Authors: Yashaswi Galhotra*, Ying Ding, Li Shen, Huanmei Wu, Tianlong Chen, Kaixiong Zhou</p>
+                            <p class="text-gray-600 mb-2">Conference: ACM-BCB, 2024</p>
+                            <div class="mb-4">
+                                <h4 class="font-semibold mb-2">Abstract:</h4>
+                                <p class="text-gray-600">In this study, we emphasize the importance of incorporating Social Determinants of Health (SDoH)—such as economic, educational, environmental, and behavioral factors—into per- sonalized medicine. These factors are often overlooked by re- searchers due to challenges like fragmented knowledge, non- standardized research repositories, and evolving ontologies. Excluding SDoH factors limits the accuracy and effectiveness of disease-drug interaction predictions, which are essential for precision medicine. To overcome these challenges, we introduced the BioSocialNet framework, which integrates SDoH factors into knowledge graph construction and uses Graph Convolutional Networks (GCN) for more accurate predictions. BioSocialNet consists of two key components: (1) construction of a comprehensive knowledge graph that merges biomedical and SDoH data, and (2) deployment of GCNs that model the complex interactions between these factors. We applied this framework to incorporate SDoH data from the MIMIC III dataset into PrimeKG, a comprehen- sive knowledge graph that includes a wide range of diseases, drugs, and biomedical interactions. We then trained a GCN model on this enriched graph, resulting in a significant im- provement in disease-drug linkage prediction accuracy, from 88.05% to 94.08%. This finding underscores the pivotal role of SDoH in enhancing the precision and implications of person- alized medicine, providing a clear pathway for more accurate and equitable healthcare interventions.</p>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-file-pdf mr-2"></i> Read Paper
+                                </a>
+                                <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
+                                    <i class="fab fa-github mr-2"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Paper Under Review Example -->
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover transform transition duration-500">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/4">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="/api/placeholder/300/200" alt="Research in Progress" class="rounded-lg w-full object-cover">
+                            </div>
+                            <div class="mt-4">
+                                <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+                                    Under Review
+                                </span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-2xl font-bold mb-4">Three-way classification of Infant Fussing and Crying in Real-world Environments</h3>
+                            <p class="text-gray-600 mb-2">Authors: Yashaswi Galhotra*, Priyanka Khante, Kaya de Barbaro</p>
+                            <p class="text-gray-600 mb-2">Submitted to: ICASSP, 2025</p>
+                            <div class="mb-4">
+                                <h4 class="font-semibold mb-2">Preview:</h4>
+                                <p class="text-gray-600">There has been a proliferation of models for automated infant cry detection. With the publication of novel real-world datasets of infant distress, recent models have begun to generalize beyond controlled environments. However, most cry detection models are trained in controlled environments, meaning they are not likely to generalize to real-world settings. Additionally, most models do not differentiate between levels of distress, i.e. between fussing versus crying, which is essential for determining clinical appropriateness of response. In this paper, we present a machine learning approach leveraging deep features to classify infant distress in natural environments. Our two-way model (distress vs. non-distress) achieved an F1 score of 0.76 (Precision: 0.72, Recall: 0.84), demonstrating significantly improved external validity over prior real-world models. Our three-way model (cry vs. fuss vs. non-distress) achieved an F1 score of 0.59 (Precision: 0.55, Recall: 0.67), providing a new baseline for real-world classification. We release a comprehensive dataset of annotated real-world infant fuss and cry vocalizations to support further research in this area.</p>
+                            </div>
+                            <div class="flex space-x-4">
+                                <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg cursor-not-allowed">
+                                    <i class="fas fa-clock mr-2"></i> Coming Soon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Poster Presentation Example -->
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover transform transition duration-500">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/4">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="/api/placeholder/300/200" alt="Research Poster" class="rounded-lg w-full object-cover">
+                            </div>
+                            <div class="mt-4">
+                                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                    Poster Presentation
+                                </span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-2xl font-bold mb-4"> Identifying Infant Distress Moments in Everyday Environment: A Multidisciplinary Approach Bridging Developmental Psychology and Machine Learning                            </h3>
+                            <p class="text-gray-600 mb-2">Presented at: ICDL, 2024</p>
+                            <div class="mb-4">
+                                <h4 class="font-semibold mb-2">Summary:</h4>
+                                <p class="text-gray-600">[Brief description of your poster presentation]</p>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-image mr-2"></i> View Poster
+                                </a>
+                                <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
+                                    <i class="fas fa-presentation mr-2"></i> Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Poster Presentation Example -->
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover transform transition duration-500">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/4">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <img src="/api/placeholder/300/200" alt="Research Poster" class="rounded-lg w-full object-cover">
+                            </div>
+                            <div class="mt-4">
+                                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                    Abstract
+                                </span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-2xl font-bold mb-4">Leveraging AI to Automatically Parse Parent-child Activities and Affect from Longform Audio Recordings                            </h3>
+                            <p class="text-gray-600 mb-2">SRCD, 2025</p>
+                            <div class="mb-4">
+                                <h4 class="font-semibold mb-2">Summary:</h4>
+                                <p class="text-gray-600">There is growing recognition of the importance of capturing children’s everyday experiences as critical "inputs" to development (de Barbaro & Fausey, 2022). Developmental scientists are increasingly using wearable sensors, such as the Language ENvironment Analysis (LENA), a lightweight audio recorder worn by children, to capture up to 24 hours of continuous audio in their everyday home environments. While this provides unparalleled access to children’s everyday experiences, it also presents a significant challenge: how to efficiently analyze large volumes of audio data to extract meaningful activity from recordings. 
+                                    In the current work, our goal is to leverage and test the efficacy of existing AI tools to parse real-world child-worn audio recordings to identify 1) everyday household activities, including including meals, playing, bedtime, reading, etc, and 2) emotional and mental states of family members, including joy, frustration feelings of anxiety, and tantrums. Our aim is to develop a pipeline to provide developmental scientists an entry point to identify areas of interest for more detailed human annotation.</p>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-image mr-2"></i> View Poster
+                                </a>
+                                <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
+                                    <i class="fas fa-presentation mr-2"></i> Slides
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Why Choose Me Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Why Collaborate With Me?</h2>
+            
+            <!-- Fun Disclaimer -->
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <p class="text-xl text-gray-700 font-medium">
+                    <span class="italic">"You Won't Regret* Collaborating With Me!"</span> 
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    *Side effects may include: sudden bursts of innovation, chronic problem-solving addiction, and spontaneous "aha!" moments 🧠✨
+                </p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover">
+                    <div class="text-3xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold mb-4">Innovative Approach</h3>
+                    <p class="text-gray-600 mb-4">"Turning complex AI challenges into elegant solutions. Think of me as your AI co-pilot, but I promise not to take over the world! 🤖"</p>
+                    <p class="text-sm text-gray-500 italic">"Seriously though: Pioneering AI solutions that prioritize human benefit and ethical considerations."</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover">
+                    <div class="text-3xl mb-4">🏆</div>
+                    <h3 class="text-xl font-bold mb-4">Track Record</h3>
+                    <p class="text-gray-600 mb-4">"My code is like my coffee - robust, reliable, and occasionally keeps me up at night! ☕"</p>
+                    <p class="text-sm text-gray-500 italic">"Seriously though: Published research in top conferences with real-world applications and impact."</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 glow-on-hover">
+                    <div class="text-3xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold mb-4">Collaboration Style</h3>
+                    <p class="text-gray-600 mb-4">"I'm like Stack Overflow, but friendlier and actually online when you need me! 😉"</p>
+                    <p class="text-sm text-gray-500 italic">"Seriously though: Committed to open communication and delivering results that matter."</p>
+                </div>
+            </div>
+    
+            <!-- Fun Collaboration Call-to-Action -->
+            <div class="text-center mt-12 space-y-4">
+                <p class="text-xl font-bold text-gray-700">
+                    🌟 Ready to Science Together? 🌟
+                </p>
+                <p class="text-lg text-gray-600">
+                    Let's create something amazing (and maybe share some memes along the way)
+                </p>
+                <div class="text-sm text-gray-500 italic mt-4">
+                    Warning: Collaboration may result in breakthrough innovations, published papers, and occasional nerdy jokes! 🤓
+                </div>
+            </div>
+    
+            <!-- Serious Bottom Line -->
+            <div class="mt-12 p-6 bg-white rounded-xl shadow-lg">
+                <h3 class="text-center text-xl font-bold mb-4">The Bottom Line</h3>
+                <p class="text-gray-700 text-center">
+                    Beyond the humor, I'm deeply committed to developing AI solutions that make a real difference in people's lives. My research combines technical expertise with a genuine passion for human-centered innovation.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Social Links -->
+
+    <!-- Add a research metrics section -->
+    <section class="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-8">Research Impact</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">1</div>
+                    <div class="text-gray-600">Published Papers</div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">3</div>
+                    <div class="text-gray-600">Poster Presentations</div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">1</div>
+                    <div class="text-gray-600">Papers Under Review</div>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                    <div class="text-gray-600">Collaborations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Add necessary JavaScript for tab functionality -->
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.publication-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('bg-blue-600', 'text-white'));
+                tab.classList.add('bg-blue-600', 'text-white');
+            });
+        });
+    </script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Let's Create Something Amazing Together</h2>
+            <p class="text-xl text-gray-600 mb-8">Interested in collaborating on healthcare AI research? Let's connect!</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/yashaswigalhotra/" target="_blank" class="px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition transform hover:scale-105">
+                    Connect on LinkedIn
+                </a>
+                <a href="https://github.com/longhornyash" target="_blank" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition transform hover:scale-105">
+                    View My GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const increment = target / 100;
+            
+            const updateCounter = () => {
+                const count = parseInt(counter.innerText);
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            updateCounter();
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
