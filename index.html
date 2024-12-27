@@ -98,19 +98,81 @@
         .publication-item.hidden {
             display: none;
         }
+
+        /* Updated Typewriter Animation */
+        .typewriter {
+            position: relative;
+        }
+
+        .typewriter-text {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #3b82f6;
+            animation: 
+                typing 3s steps(40, end),
+                blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6 }
+        }
+
+        /* Subtitle fade-in animation */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in forwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Drop-in animation */
+        .drop-in-text {
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: dropIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes dropIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            60% {
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-xl font-bold gradient-text">Yashaswi Galhotra</a>
+                <a href="#" class="text-xl font-bold gradient-text hover:scale-105 transition-transform">Yashaswi Galhotra</a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                    <a href="#publications" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
-                    <a href="#impact" class="text-gray-600 hover:text-blue-600 transition">Impact</a>
-                    <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Let's collaborate</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 hover:scale-105 transition-all font-medium">About</a>
+                    <a href="#publications" class="text-gray-700 hover:text-blue-600 hover:scale-105 transition-all font-medium">Publications</a>
+                    <a href="#impact" class="text-gray-700 hover:text-blue-600 hover:scale-105 transition-all font-medium">Impact</a>
+                    <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 hover:scale-105 transition-all shadow-sm font-medium">Let's collaborate</a>
                 </div>
             </div>
         </div>
@@ -124,16 +186,17 @@
                     <h1 class="text-5xl font-bold mb-6">
                         Hi, I'm <span class="gradient-text">Yashaswi Galhotra</span>
                     </h1>
-                    <div class="typewriter text-2xl text-gray-700 mb-6">
-                        <span class="typewriter-text">Building AI For Better Living, Longer*</span>
-                        <span class="typewriter-cursor"></span>
-                        <div class="text-sm italic mt-2">*upgrading humans to version 2.0, no restart required 🚀😎</div>
+                    <div class="drop-in-text text-2xl text-gray-700 mb-6">
+                        <div class="drop-in-text font-bold">Building AI For Better Living, Longer</div>
+                        <div class="drop-in-text text-lg text-blue-600 font-medium" style="animation-delay: 1s">
+                            upgrading humans to version 2.0, no restart required 🚀
+                        </div>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#publications" class="smooth-scroll px-8 py-4 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition transform hover:scale-105">
                             Explore My Research
                         </a>
-                        <a href="https://drive.google.com/file/d/1ghuxGz2lxPaqZ30mrTNb1XqR4NbB71vZ/view?usp=sharing" class="smooth-scroll px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition transform hover:scale-105">
+                        <a href="https://drive.google.com/file/d/1hfxIwVQrP5FJKsOU84tu32ShD9p4cpkM/view?usp=drive_link" target="_blank" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition transform hover:scale-105">
                             Resume
                         </a>
                     </div>
@@ -308,6 +371,18 @@
                 </a>
                 <a href="https://github.com/longhornyash" target="_blank" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-xl hover:bg-blue-50 transition transform hover:scale-105">
                     View My GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Map Section -->
+    <section class="py-12 bg-white text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-2xl font-bold text-gray-700 mb-8">Visitor Map</h3>
+            <div class="flex justify-center">
+                <a href="http://www.clustrmaps.com/map/Yashaswigalhotra.netlify.app" title="Visit tracker for Yashaswigalhotra.netlify.app">
+                    <img src="//www.clustrmaps.com/map_v2.png?d=fZK16LzlvIhrMFMZ63ESq6PiB0D_6EhonMgappmwVNw" alt="Visitor Map" />
                 </a>
             </div>
         </div>
